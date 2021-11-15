@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://kit.fontawesome.com/1ba63055e2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+    <title>Pokemon Memory Game</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='game_style.css'>
+    <script defer src='game.js'></script>
+</head>
+
+<body>
+    <div id="dialogoverlay"></div>
+    <div id="dialogbox">
+        <div>
+            <div id="dialogboxhead"></div>
+            <div id="dialogboxbody"></div>
+            <div id="dialogboxfoot"></div>
+        </div>
+    </div>
+
+    <section class="memory-game">
+        <div class="memory-card" data-framework="bulbasaur">
+            <img class="front-face" src="https://media.giphy.com/media/N7UQCEtGgRMRi/source.gif" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+
+        <div class="memory-card" data-framework="bulbasaur">
+            <img class="front-face" src="https://media.giphy.com/media/N7UQCEtGgRMRi/source.gif" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+
+        <div class="memory-card" data-framework="charmander">
+            <img class="front-face" src="images/charmander.png" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+
+        <div class="memory-card" data-framework="charmander">
+            <img class="front-face" src="images/charmander.png" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+
+        <div class="memory-card" data-framework="jigglypuff">
+            <img class="front-face" src="images/jigglypuff.png" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+
+        <div class="memory-card" data-framework="jigglypuff">
+            <img class="front-face" src="images/jigglypuff.png" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+
+        <div class="memory-card" data-framework="magmar">
+            <img class="front-face" src="images/magmar.png" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+
+        <div class="memory-card" data-framework="magmar">
+            <img class="front-face" src="images/magmar.png" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+
+        <div class="memory-card" data-framework="mewtwo">
+            <img class="front-face" src="images/mewtwo.png" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+
+        <div class="memory-card" data-framework="mewtwo">
+            <img class="front-face" src="images/mewtwo.png" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+
+        <div class="memory-card" data-framework="pikachu">
+            <img class="front-face" src="https://media.giphy.com/media/slVWEctHZKvWU/source.gif" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+
+        <div class="memory-card" data-framework="pikachu">
+            <img class="front-face" src="https://media.giphy.com/media/slVWEctHZKvWU/source.gif" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+
+        <div class="memory-card" data-framework="snorlax">
+            <img class="front-face" src="images/snorlax.png" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+
+        <div class="memory-card" data-framework="snorlax">
+            <img class="front-face" src="images/snorlax.png" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+
+        <div class="memory-card" data-framework="squirtle">
+            <img class="front-face" src="images/squirtle.png" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+
+        <div class="memory-card" data-framework="squirtle">
+            <img class="front-face" src="images/squirtle.png" />
+            <img class="back-face" src="images/back.png" />
+        </div>
+    </section>
+    <section class="player-details">
+        <div class="player-name">
+            <label>Player 1 name:</label>
+            </br>
+            <label id="p1-name">Default</label><br>
+            </br>
+            <label>Player 2 name:</label>
+            </br>
+            <label id="p2-name">Default</label>
+        </div>
+        <div class="player-score">
+            <label>Player 1 score:</label>
+            <label id="p1-score">Default</label>
+            </br>
+            <label>Player 1 games won:</label>
+            <label id="p1-games-won">Default</label><br>
+            </br>
+            <label>Player 2 score:</label>
+            <label id="p2-score">Default</label>
+            </br>
+            <label>Player 2 games won:</label>
+            <label id="p2-games-won">Default</label>
+        </div>
+        <div class="player-turn">
+            <label>Now playing:</label>
+            <label id="current-player">Default</label><br>
+        </div>
+
+        <div class='unmute' onclick="audio(this)"></div>
+        <audio id="track" autoplay="autoplay" loop="loop">
+            <source src="audio/game_music.mp3" />
+        </audio>
+    </section>
+    <!--
+    <audio class="audio" controls loop autoplay>
+        <source src="audio/game_music.mp3">
+    </audio>-->
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
